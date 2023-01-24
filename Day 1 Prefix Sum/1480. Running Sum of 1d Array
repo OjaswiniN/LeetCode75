@@ -13,4 +13,20 @@ Output: [1,2,3,4,5]
 Explanation: Running sum is obtained as follows: [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1].
 
 
-Approach ~
+Approach 
+
+
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        int sum = 0;
+        for(int i=0;i<nums.size();i++) {
+          sum = sum + nums[i];
+          nums[i] = sum;
+         }
+        
+        return nums;
+    }
+};
+
+
